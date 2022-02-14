@@ -1,0 +1,8 @@
+@use '../../App.scss';
+
+.session {
+  background-color: App.$color-red;
+  grid-row: 3 / end;
+  grid-column: 3 / 4;
+  border-radius: 5px;
+}

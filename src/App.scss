@@ -9,7 +9,9 @@
 
 // VARIABLES
 $color-black-background: #020203;
+$color-grey: #74798c;
 $color-white: #fff;
+$color-red: #ff0000;
 
 // GENERALS
 html {
@@ -19,11 +21,11 @@ html {
 
 body {
   box-sizing: border-box;
+  font-family: 'Roboto';
 }
 
 #root {
   width: 100%;
-  background-color: brown;
 }
 
 a {
@@ -34,4 +36,13 @@ a {
 ul,
 ol {
   list-style: none;
+}
+
+// Main
+.main {
+  height: calc(100vh - 9rem);
+  display: grid;
+  grid-template-rows: 1fr 1.5fr 1fr;
+  grid-template-columns: 12rem 9rem repeat(4, 1fr) 9rem;
+  gap: 3rem;
 }

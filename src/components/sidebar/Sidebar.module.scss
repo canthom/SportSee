@@ -1,0 +1,40 @@
+@use '../../App.scss';
+
+.sidebar {
+  background-color: App.$color-black-background;
+  position: relative;
+  grid-column: 1 / 2;
+  grid-row: 1 / end;
+
+  &__nav {
+    height: 100%;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &__item {
+    background-color: App.$color-white;
+    padding: 1.5rem;
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &__copyright {
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: 5%;
+    font-size: 1.2rem;
+    color: App.$color-white;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,18 @@
+@use '../../App.scss';
+
+.dashboardHeader {
+  grid-column: 3 / end;
+  padding-top: 7rem;
+
+  &__title {
+    font-size: 4.8rem;
+
+    span {
+      color: App.$color-red;
+    }
+  }
+
+  &__congrats {
+    font-size: 1.8rem;
+  }
+}
