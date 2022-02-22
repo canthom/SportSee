@@ -1,16 +1,14 @@
 import React from 'react';
-import styles from './DashboardHeader.module.scss';
+import StyledDashboardHeader from './DashboardHeader.styled';
 
-function DashboardHeader() {
+function DashboardHeader(props) {
   return (
-    <header className={styles.dashboardHeader}>
-      <h1 className={styles.dashboardHeader__title}>
-        Bonjour <span>Thomas</span>
+    <StyledDashboardHeader>
+      <h1>
+        Bonjour <span>{props.name}</span>
       </h1>
-      <span className={styles.dashboardHeader__congrats}>
-        Félicitation ! Vous avez explosé vos objectifs hier 👏
-      </span>
-    </header>
+      <span>Félicitation ! Vous avez explosé vos objectifs hier 👏</span>
+    </StyledDashboardHeader>
   );
 }
 

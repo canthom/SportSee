@@ -1,36 +1,28 @@
 import React from 'react';
 import logo from '../assets/header-logo.svg';
-import styles from './Header.module.scss';
+import StyledHeader from './Header.styled';
 
 function Header() {
   return (
-    <header className={styles.header}>
-      <img className={styles.header__logo} src={logo} alt="Logo de SportSee" />
-      <nav className={styles.header__nav}>
-        <ul className={styles.header__list}>
-          <li className={styles.header__item}>
-            <a href="/" className={styles.header__link}>
-              Accueil
-            </a>
+    <StyledHeader>
+      <img src={logo} alt="Logo de SportSee" />
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Accueil</a>
           </li>
-          <li className={styles.header__item}>
-            <a href="/" className={styles.header__link}>
-              Profil
-            </a>
+          <li>
+            <a href="/">Profil</a>
           </li>
-          <li className={styles.header__item}>
-            <a href="/" className={styles.header__link}>
-              Réglages
-            </a>
+          <li>
+            <a href="/">Réglages</a>
           </li>
-          <li className={styles.header__item}>
-            <a href="/" className={styles.header__link}>
-              Communauté
-            </a>
+          <li>
+            <a href="/">Communauté</a>
           </li>
         </ul>
       </nav>
-    </header>
+    </StyledHeader>
   );
 }
 

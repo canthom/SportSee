@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './DashboardRadar.module.scss';
+import StyledDashboardRadar from './DashboardRadar.styled';
 
 function DashboardRadar() {
-  return <div className={styles.radar}>DashboardRadar</div>;
+  return <StyledDashboardRadar>DashboardRadar</StyledDashboardRadar>;
 }
 
 export default DashboardRadar;

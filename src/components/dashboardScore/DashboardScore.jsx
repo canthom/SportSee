@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './DashboardScore.module.scss';
+import StyledDashboardScore from './dashboardScore.styled';
 
 function DashboardScore() {
-  return <div className={styles.score}>DashboardScore</div>;
+  return <StyledDashboardScore>DashboardScore</StyledDashboardScore>;
 }
 
 export default DashboardScore;

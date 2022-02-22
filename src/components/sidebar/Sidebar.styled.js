@@ -1,16 +1,16 @@
-@use '../../App.scss';
+import styled from 'styled-components';
 
-.sidebar {
-  background-color: App.$color-black-background;
+const StyledSidebar = styled.div`
+  background-color: ${({ theme }) => theme.colors.black};
   position: relative;
   grid-column: 1 / 2;
   grid-row: 1 / end;
 
-  &__nav {
+  nav {
     height: 100%;
   }
 
-  &__list {
+  ul {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,8 +18,8 @@
     height: 100%;
   }
 
-  &__item {
-    background-color: App.$color-white;
+  li {
+    background-color: ${({ theme }) => theme.colors.white};
     padding: 1.5rem;
     width: 6.4rem;
     height: 6.4rem;
@@ -27,14 +27,15 @@
     margin-bottom: 2rem;
   }
 
-  &__copyright {
+  span {
     position: absolute;
     left: 50%;
     right: 50%;
     bottom: 5%;
     font-size: 1.2rem;
-    color: App.$color-white;
+    color: ${({ theme }) => theme.colors.white};
     writing-mode: vertical-lr;
     transform: rotate(180deg);
   }
-}
+`;
+export default StyledSidebar;

@@ -3,51 +3,40 @@ import iconEnergy from '../assets/icon-energy.svg';
 import iconChicken from '../assets/icon-chicken.svg';
 import iconApple from '../assets/icon-apple.svg';
 import iconBurger from '../assets/icon-cheeseburger.svg';
-import styles from './DashboardStats.module.scss';
+import StyledDashboardStats from './DashboardStats.styled';
+import StatsBox from './StatsBox/StatsBox';
 
-function DashboardStats() {
+function DashboardStats(props) {
   return (
-    <div className={styles.stats}>
-      <div className={styles.stats__box}>
-        <div className={`${styles.stats__icon} ${styles.stats__iconEnergy}`}>
-          <img src={iconEnergy} alt="Icône Énergie" />
-        </div>
-        <div className={styles.stats__numbers}>
-          <div>1,930kCal</div>
-          <div>Calories</div>
-        </div>
-      </div>
+    <StyledDashboardStats>
+      <StatsBox
+        title="Calories"
+        logo={iconEnergy}
+        bg="rgba(255, 0, 0, 0.1)"
+        quantity={`${props.calorie}kCal`}
+      />
 
-      <div className={styles.stats__box}>
-        <div className={`${styles.stats__icon} ${styles.stats__iconChicken}`}>
-          <img src={iconChicken} alt="Icône Protéine" />
-        </div>
-        <div className={styles.stats__numbers}>
-          <div>155g</div>
-          <div>Proteines</div>
-        </div>
-      </div>
+      <StatsBox
+        title="Protéines"
+        logo={iconChicken}
+        bg="rgba(74, 184, 255, 0.1)"
+        quantity={`${props.protein}g`}
+      />
 
-      <div className={styles.stats__box}>
-        <div className={`${styles.stats__icon} ${styles.stats__iconApple}`}>
-          <img src={iconApple} alt="Icône Glucides" />
-        </div>
-        <div className={styles.stats__numbers}>
-          <div>290g</div>
-          <div>Glucides</div>
-        </div>
-      </div>
+      <StatsBox
+        title="Glucides"
+        logo={iconApple}
+        bg="rgba(253, 204, 12, 0.1)"
+        quantity={`${props.carbo}g`}
+      />
 
-      <div className={styles.stats__box}>
-        <div className={`${styles.stats__icon} ${styles.stats__iconBurger}`}>
-          <img src={iconBurger} alt="Icône Lipides" />
-        </div>
-        <div className={styles.stats__numbers}>
-          <div>50g</div>
-          <div>Lipides</div>
-        </div>
-      </div>
-    </div>
+      <StatsBox
+        title="Lipides"
+        logo={iconBurger}
+        bg="rgba(253, 81, 129, 0.1)"
+        quantity={`${props.lipid}g`}
+      />
+    </StyledDashboardStats>
   );
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './DashboardSession.module.scss';
+import StyledDashboardSession from './DashboardSession.styled';
 
 function DashboardSession() {
-  return <div className={styles.session}>DashboardSession</div>;
+  return <StyledDashboardSession>DashboardSession</StyledDashboardSession>;
 }
 
 export default DashboardSession;
