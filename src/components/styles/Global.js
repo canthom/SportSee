@@ -31,7 +31,5 @@ ul,
 ol {
   list-style: none;
 }
-
-
 `;
 export default GlobalStyles;

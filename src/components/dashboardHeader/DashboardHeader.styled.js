@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const StyledDashboardHeader = styled.header`
   grid-column: 3 / end;
+  grid-row: 1 / 2;
   padding-top: 7rem;
 
   h1 {

@@ -10,6 +10,7 @@ import DashboardSession from './components/dashboardSession/DashboardSession';
 import DashboardRadar from './components/dashboardRadar/DashboardRadar';
 import DashboardScore from './components/dashboardScore/DashboardScore';
 import DashboardStats from './components/dashboardStats/DashboardStats';
+import { getUser } from './functions/getUser';
 
 const user = {
   data: {
@@ -40,14 +41,84 @@ const activity = {
   },
 };
 
+const average = {
+  data: {
+    userId: 18,
+    sessions: [
+      { day: 1, sessionLength: 30 },
+      { day: 2, sessionLength: 40 },
+      { day: 3, sessionLength: 50 },
+      { day: 4, sessionLength: 30 },
+      { day: 5, sessionLength: 30 },
+      { day: 6, sessionLength: 50 },
+      { day: 7, sessionLength: 50 },
+    ],
+  },
+};
+
+const performance = {
+  data: {
+    userId: 18,
+    kind: {
+      1: 'cardio',
+      2: 'energy',
+      3: 'endurance',
+      4: 'strength',
+      5: 'speed',
+      6: 'intensity',
+    },
+    data: [
+      { value: 200, kind: 1 },
+      { value: 240, kind: 2 },
+      { value: 80, kind: 3 },
+      { value: 80, kind: 4 },
+      { value: 220, kind: 5 },
+      { value: 110, kind: 6 },
+    ],
+  },
+};
+
 const theme = {
   colors: {
     white: '#fff',
     black: '#020203',
     grey: '#74798c',
+    greyDark: '#282D30',
     red: '#ff0000',
   },
 };
+
+const testRadar = [
+  {
+    kind: 'cardio',
+    value: '200',
+  },
+  {
+    kind: 'energy',
+    value: '240',
+  },
+  {
+    kind: 'endurance',
+    value: '80',
+  },
+  {
+    kind: 'strength',
+    value: '80',
+  },
+  {
+    kind: 'speed',
+    value: '220',
+  },
+  {
+    kind: 'intensity',
+    value: '110',
+  },
+];
+
+const testScore = [
+  { score: 30, fill: 'red' },
+  { score: 100, fill: 'transparent' },
+];
 
 function App() {
   return (
@@ -60,9 +131,9 @@ function App() {
           <Sidebar />
           <DashboardTop name={user.data.userInfos.firstName} />
           <DashboardDaily data={activity.data.sessions} />
-          <DashboardSession />
-          <DashboardRadar />
-          <DashboardScore />
+          <DashboardSession data={average.data.sessions} />
+          <DashboardRadar data={testRadar} />
+          <DashboardScore data={testScore} />
           <DashboardStats
             calorie={user.data.keyData.calorieCount}
             protein={user.data.keyData.proteinCount}
