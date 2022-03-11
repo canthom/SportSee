@@ -97,15 +97,25 @@ function DashboardDaily(props) {
         >
           <CartesianGrid vertical={false} strokeDasharray={1} />
           <XAxis dataKey="day" />
-          <YAxis dataKey="kilogram" orientation="right" />
+          <YAxis
+            dataKey="kilogram"
+            orientation="right"
+            type="number"
+            domain={[60, 400]}
+          />
           <Tooltip content={<CustomTooltip />} />
           <Legend
             content={renderLegend}
             wrapperStyle={legendStyle}
             align="right"
           />
-          <Bar dataKey="kilogram" radius={[10, 10, 0, 0]} />
-          <Bar dataKey="calories" fill="red" radius={[10, 10, 0, 0]} />
+          <Bar dataKey="kilogram" name="Poids (kg)" radius={[10, 10, 0, 0]} />
+          <Bar
+            dataKey="calories"
+            name="Calories brûlées (kCal)"
+            fill="red"
+            radius={[10, 10, 0, 0]}
+          />
         </BarChart>
       </ResponsiveContainer>
     </StyledDashboardDaily>

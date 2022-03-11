@@ -9,6 +9,32 @@ import {
   Radar,
 } from 'recharts';
 
+function radarTickFormatter(value) {
+  if (value === 'cardio') {
+    return 'Cardio';
+  }
+
+  if (value === 'energy') {
+    return 'Énergie';
+  }
+
+  if (value === 'speed') {
+    return 'Vitesse';
+  }
+
+  if (value === 'strength') {
+    return 'Force';
+  }
+
+  if (value === 'intensity') {
+    return 'Intensité';
+  }
+
+  if (value === 'endurance') {
+    return 'Endurance';
+  }
+}
+
 function DashboardRadar(props) {
   return (
     <StyledDashboardRadar>
@@ -29,6 +55,7 @@ function DashboardRadar(props) {
               fontSize: '12px',
               textTransform: 'capitalize',
             }}
+            tickFormatter={radarTickFormatter}
           />
           <PolarRadiusAxis
             domain={[0, 250]}
