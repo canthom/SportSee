@@ -53,8 +53,11 @@ class DataModel {
       id: result.data.id,
       firstName: result.data.userInfos.firstName,
       score: [
-        { number: result.data.score * 100 || result.data.todayScore * 100 },
-        { number: 100 },
+        {
+          number: result.data.score * 100 || result.data.todayScore * 100,
+          fill: 'red',
+        },
+        { number: 100, fill: 'transparent' },
       ],
       stats: {
         calorie: result.data.keyData.calorieCount,
