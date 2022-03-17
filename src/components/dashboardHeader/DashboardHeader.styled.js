@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import { devices } from '../styles/MediaQueries.js';
 
 const StyledDashboardHeader = styled.header`
   grid-column: 3 / end;
   grid-row: 1 / 2;
-  padding-top: 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h1 {
     font-size: 4.8rem;

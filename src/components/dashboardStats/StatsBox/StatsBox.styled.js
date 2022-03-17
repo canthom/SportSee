@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const StyledStatsBox = styled.div`
     display: flex;
     align-items: center;
-    width: 20rem;
+    width: max-content;
 
     & > div:first-of-type {
       width: 6rem;

@@ -3,7 +3,6 @@ import StyledDashboardScore from './dashboardScore.styled';
 import { ResponsiveContainer, RadialBarChart, RadialBar } from 'recharts';
 
 function DashboardScore(props) {
-  console.log(props.data[0]);
   return (
     <StyledDashboardScore>
       <h2>Score</h2>

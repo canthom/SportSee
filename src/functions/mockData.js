@@ -1,5 +1,4 @@
 export function getUser(id) {
-  console.log(typeof id);
   if (id === '12') {
     return new Promise((resolve, reject) => {
       resolve({

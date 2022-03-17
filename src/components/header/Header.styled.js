@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledHeader = styled.div`
+const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.colors.black};
   height: 9rem;
   display: flex;

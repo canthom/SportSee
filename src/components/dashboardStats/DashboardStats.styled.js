@@ -8,6 +8,6 @@ const StyledDashboardStats = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem;
+  padding: 0;
 `;
 export default StyledDashboardStats;

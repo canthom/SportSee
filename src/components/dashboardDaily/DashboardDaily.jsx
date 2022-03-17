@@ -63,6 +63,16 @@ const renderLegend = (props) => {
   );
 };
 
+function sessionTickFormatter(value) {
+  value = value.slice(8, 10);
+
+  if (value.startsWith('0')) {
+    value = value.slice(1, 2);
+  }
+
+  return value;
+}
+
 const tooltipStyle = {
   color: 'white',
   backgroundColor: 'red',
@@ -96,7 +106,14 @@ function DashboardDaily(props) {
           margin={{ top: 50, right: 5, bottom: 5, left: 5 }}
         >
           <CartesianGrid vertical={false} strokeDasharray={1} />
-          <XAxis dataKey="day" />
+          <XAxis
+            dataKey="day"
+            tickLine={false}
+            axisLine={false}
+            tickFormatter={sessionTickFormatter}
+            tickCount={10}
+            tickMargin={5}
+          />
           <YAxis
             hide="true"
             dataKey="calories"
@@ -107,6 +124,8 @@ function DashboardDaily(props) {
             dataKey="kilogram"
             yAxisId="left"
             orientation="right"
+            tickLine={false}
+            axisLine={false}
             type="number"
             domain={[67.5, 70.5]}
           />

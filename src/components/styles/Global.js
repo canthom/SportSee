@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-
+import { devices } from './MediaQueries.js';
 const GlobalStyles = createGlobalStyle`
 *,
 *::after,
@@ -14,12 +14,23 @@ html {
 }
 
 body {
+  display: grid;
+  place-items: center;
   box-sizing: border-box;
   font-family: 'Roboto';
+  height: 100vh;
+  background-color: ${({ theme }) => theme.colors.black};
 }
 
 #root {
-  width: 100%;
+  width: 1024px;
+  height: 780px;
+  background-color: ${({ theme }) => theme.colors.white};
+
+  @media ${devices.laptopLarge} {
+    width: 1440px;
+    height: 1024px;
+  }
 }
 
 a {
