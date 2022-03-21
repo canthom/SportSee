@@ -1,5 +1,6 @@
 import React from 'react';
 import StyledStatsBox from './StatsBox.styled';
+import propTypes from 'prop-types';
 
 function StatsBox(props) {
   const { title = 'Titre', bg = 'red', logo = '', quantity = '111' } = props;
@@ -15,5 +16,11 @@ function StatsBox(props) {
     </StyledStatsBox>
   );
 }
+StatsBox.propTypes = {
+  title: propTypes.string.isRequired,
+  logo: propTypes.string.isRequired,
+  bg: propTypes.string.isRequired,
+  quantity: propTypes.string.isRequired,
+};
 
 export default StatsBox;

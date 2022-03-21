@@ -5,6 +5,7 @@ import iconApple from '../assets/icon-apple.svg';
 import iconBurger from '../assets/icon-cheeseburger.svg';
 import StyledDashboardStats from './DashboardStats.styled';
 import StatsBox from './StatsBox/StatsBox';
+import propTypes from 'prop-types';
 
 function DashboardStats(props) {
   return (
@@ -39,5 +40,11 @@ function DashboardStats(props) {
     </StyledDashboardStats>
   );
 }
+DashboardStats.propTypes = {
+  calorie: propTypes.number.isRequired,
+  protein: propTypes.number.isRequired,
+  carbo: propTypes.number.isRequired,
+  lipid: propTypes.number.isRequired,
+};
 
 export default DashboardStats;

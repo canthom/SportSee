@@ -5,7 +5,6 @@ import GlobalStyles from './components/styles/Global';
 import Header from './components/header/Header';
 import Main from './components/styles/Main.styled';
 import Sidebar from './components/sidebar/Sidebar';
-
 import UserPage from './pages/userPage/userPage.jsx';
 import Home from './pages/home/Home';
 

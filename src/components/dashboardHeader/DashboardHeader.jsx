@@ -1,5 +1,6 @@
 import React from 'react';
 import StyledDashboardHeader from './DashboardHeader.styled';
+import propTypes from 'prop-types';
 
 function DashboardHeader(props) {
   return (
@@ -11,5 +12,5 @@ function DashboardHeader(props) {
     </StyledDashboardHeader>
   );
 }
-
+DashboardHeader.prototype = { name: propTypes.string.isRequired };
 export default DashboardHeader;

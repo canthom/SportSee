@@ -10,6 +10,7 @@ import {
   Legend,
   Bar,
 } from 'recharts';
+import propTypes from 'prop-types';
 
 const legendStyle = {
   position: 'absolute',
@@ -154,5 +155,9 @@ function DashboardDaily(props) {
     </StyledDashboardDaily>
   );
 }
+
+DashboardDaily.propTypes = {
+  data: propTypes.array.isRequired,
+};
 
 export default DashboardDaily;

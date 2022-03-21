@@ -1,6 +1,7 @@
 import React from 'react';
 import StyledDashboardScore from './dashboardScore.styled';
 import { ResponsiveContainer, RadialBarChart, RadialBar } from 'recharts';
+import propTypes from 'prop-types';
 
 function DashboardScore(props) {
   return (
@@ -18,5 +19,6 @@ function DashboardScore(props) {
     </StyledDashboardScore>
   );
 }
+DashboardScore.propTypes = { data: propTypes.array.isRequired };
 
 export default DashboardScore;

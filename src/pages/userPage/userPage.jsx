@@ -5,9 +5,11 @@ import DashboardSession from '../../components/dashboardSession/DashboardSession
 import DashboardRadar from '../../components/dashboardRadar/DashboardRadar';
 import DashboardScore from '../../components/dashboardScore/DashboardScore';
 import DashboardStats from '../../components/dashboardStats/DashboardStats';
+import Error from '../../components/error/Error';
 import DataModel from '../../functions/dataModel.js';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import Loader from '../../components/loader/Loader';
 
 function UserPage() {
   const [dataUser, setDataUser] = useState([]);
@@ -15,6 +17,7 @@ function UserPage() {
   const [dataSessions, setDataSessions] = useState([]);
   const [dataPerf, setDataPerf] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [hasError, setHasError] = useState(false);
   const params = useParams();
 
   useEffect(() => {
@@ -34,13 +37,21 @@ function UserPage() {
       setDataPerf(response);
     });
 
-    Promise.all([promise1, promise2, promise3, promise4]).then(() => {
-      setIsLoading(false);
-    });
+    Promise.all([promise1, promise2, promise3, promise4])
+      .then(() => {
+        setIsLoading(false);
+      })
+      .catch((reason) => {
+        setHasError(true);
+      });
   }, [params.id]);
 
+  if (hasError) {
+    return <Error />;
+  }
+
   if (isLoading) {
-    return 'Chargement';
+    return <Loader />;
   }
 
   return (

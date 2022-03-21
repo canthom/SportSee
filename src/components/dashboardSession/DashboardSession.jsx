@@ -10,6 +10,7 @@ import {
   YAxis,
   ReferenceArea,
 } from 'recharts';
+import propTypes from 'prop-types';
 
 function sessionTickFormatter(value) {
   if (value === 1) {
@@ -117,5 +118,7 @@ function DashboardSession(props) {
     </StyledDashboardSession>
   );
 }
-
+DashboardSession.propTypes = {
+  data: propTypes.array.isRequired,
+};
 export default DashboardSession;

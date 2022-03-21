@@ -8,6 +8,7 @@ import {
   PolarRadiusAxis,
   Radar,
 } from 'recharts';
+import propTypes from 'prop-types';
 
 function radarTickFormatter(value) {
   if (value === 'cardio') {
@@ -70,5 +71,6 @@ function DashboardRadar(props) {
     </StyledDashboardRadar>
   );
 }
+DashboardRadar.prototype = { data: propTypes.array.isRequired };
 
 export default DashboardRadar;
