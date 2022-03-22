@@ -8,6 +8,10 @@ import Sidebar from './components/sidebar/Sidebar';
 import UserPage from './pages/userPage/userPage.jsx';
 import Home from './pages/home/Home';
 
+/**
+ * Theme Colors
+ * @type {object}
+ */
 const theme = {
   colors: {
     white: '#fff',

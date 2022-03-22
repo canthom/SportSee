@@ -1,3 +1,9 @@
+/**
+ * Send a request to fetch user activity
+ * @param { String } id
+ * @returns { Promise }
+ */
+
 export function getActivity(id) {
   return fetch(`http://localhost:3000/user/${id}/activity`)
     .then((response) => response.json())
