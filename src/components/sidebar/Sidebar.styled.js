@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../styles/MediaQueries.js';
 
 const StyledSidebar = styled.div`
   background-color: ${({ theme }) => theme.colors.black};
@@ -20,11 +21,29 @@ const StyledSidebar = styled.div`
 
   li {
     background-color: ${({ theme }) => theme.colors.white};
-    padding: 1.5rem;
-    width: 6.4rem;
-    height: 6.4rem;
+    padding: 1rem;
+    width: 5.4rem;
+    height: 5.4rem;
     border-radius: 0.5rem;
     margin-bottom: 2rem;
+    display: grid;
+    place-items: center;
+
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    @media ${devices.laptopLarge} {
+      padding: 1.5rem;
+      width: 6.4rem;
+      height: 6.4rem;
+
+      img {
+        width: min-content;
+        height: min-content;
+      }
+    }
   }
 
   span {

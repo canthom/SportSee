@@ -53,7 +53,7 @@ function DashboardRadar(props) {
             dataKey="kind"
             style={{
               fontWeight: '700',
-              fontSize: '12px',
+              fontSize: '10px',
               textTransform: 'capitalize',
             }}
             tickFormatter={radarTickFormatter}

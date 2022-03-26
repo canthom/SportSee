@@ -7,7 +7,7 @@ const StyledDashboardStats = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 0;
 `;
 export default StyledDashboardStats;

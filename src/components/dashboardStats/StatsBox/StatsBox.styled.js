@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../../styles/MediaQueries.js';
 
 const StyledStatsBox = styled.div`
     display: flex;
@@ -6,16 +7,31 @@ const StyledStatsBox = styled.div`
     width: max-content;
 
     & > div:first-of-type {
-      width: 6rem;
-      height: 6rem;
+      width: 4rem;
+      height: 4rem;
       border-radius: 0.6rem;
-      padding: 2rem;
+      padding: 1rem;
       display: grid;
       place-items: center;
       position: relative;
       overflow: hidden;
+      margin-right: 1.5rem;
 
-      margin-right: 2rem;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+
+      @media ${devices.laptopLarge} {
+        width: 6rem;
+        height: 6rem;
+        padding: 2rem;
+        margin-right: 2rem;
+        img {
+          width: min-content;
+          height: min-content;
+        }
+      }
 
       &::after {
         content: '';
@@ -28,13 +44,21 @@ const StyledStatsBox = styled.div`
 
     div:last-of-type {
       div:first-of-type {
-        font-size: 2rem;
+        font-size: 1.4rem;
         font-weight: 700;
         line-height: 1.6;
+
+        @media ${devices.laptopLarge} {
+          font-size: 2rem;
+        }
       }
       div:last-of-type {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         color: ${({ theme }) => theme.colors.grey};
+
+        @media ${devices.laptopLarge} {
+          font-size: 1.4rem;
+        }
       }
     }
   }

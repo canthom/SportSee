@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { devices } from '../styles/MediaQueries.js';
 
 const StyledDashboardScore = styled.div`
   grid-column: 5 / 6;
@@ -21,15 +22,28 @@ const StyledDashboardScore = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
     color: ${({ theme }) => theme.colors.grey};
   }
 
   span {
     font-weight: 700;
-    font-size: 26px;
+    font-size: 18px;
     color: ${({ theme }) => theme.colors.greyDark};
+  }
+
+  @media ${devices.laptopLarge} {
+    p {
+      font-size: 16px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    span {
+      font-size: 26px;
+    }
   }
 `;
 export default StyledDashboardScore;

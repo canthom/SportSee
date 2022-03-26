@@ -1,9 +1,8 @@
 /**
  * Send a request to fetch user activity
- * @param { String } id
+ * @param { String } id - User ID
  * @returns { Promise }
  */
-
 export function getActivity(id) {
   return fetch(`http://localhost:3000/user/${id}/activity`)
     .then((response) => response.json())
@@ -17,6 +16,11 @@ export function getActivity(id) {
     });
 }
 
+/**
+ * Send a request to fetch user Infos
+ * @param { String } id - User ID
+ * @returns { Promise }
+ */
 export function getUser(id) {
   return fetch(`http://localhost:3000/user/${id}`)
     .then((response) => response.json())
@@ -30,6 +34,11 @@ export function getUser(id) {
     });
 }
 
+/**
+ * Send a request to fetch user Sessions
+ * @param { String } id - User ID
+ * @returns { Promise }
+ */
 export function getSessions(id) {
   return fetch(`http://localhost:3000/user/${id}/average-sessions`)
     .then((response) => response.json())
@@ -43,6 +52,11 @@ export function getSessions(id) {
     });
 }
 
+/**
+ * Send a request to fetch user Performance
+ * @param { String } id - User ID
+ * @returns { Promise }
+ */
 export function getPerformance(id) {
   return fetch(`http://localhost:3000/user/${id}/performance`)
     .then((response) => response.json())
