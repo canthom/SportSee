@@ -157,7 +157,13 @@ function DashboardDaily(props) {
 }
 
 DashboardDaily.propTypes = {
-  data: propTypes.array.isRequired,
+  data: propTypes.arrayOf(
+    propTypes.shape({
+      day: propTypes.string,
+      kilogram: propTypes.number,
+      calories: propTypes.number,
+    })
+  ),
 };
 
 export default DashboardDaily;

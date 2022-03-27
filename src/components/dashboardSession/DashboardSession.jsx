@@ -119,6 +119,11 @@ function DashboardSession(props) {
   );
 }
 DashboardSession.propTypes = {
-  data: propTypes.array.isRequired,
+  data: propTypes.arrayOf(
+    propTypes.shape({
+      day: propTypes.number,
+      sessionLength: propTypes.number,
+    })
+  ),
 };
 export default DashboardSession;

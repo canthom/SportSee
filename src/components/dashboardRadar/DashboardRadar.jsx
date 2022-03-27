@@ -71,6 +71,12 @@ function DashboardRadar(props) {
     </StyledDashboardRadar>
   );
 }
-DashboardRadar.prototype = { data: propTypes.array.isRequired };
-
+DashboardRadar.propTypes = {
+  data: propTypes.arrayOf(
+    propTypes.shape({
+      value: propTypes.number,
+      kind: propTypes.string,
+    })
+  ),
+};
 export default DashboardRadar;

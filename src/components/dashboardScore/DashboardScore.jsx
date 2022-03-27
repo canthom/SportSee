@@ -19,6 +19,13 @@ function DashboardScore(props) {
     </StyledDashboardScore>
   );
 }
-DashboardScore.propTypes = { data: propTypes.array.isRequired };
+DashboardScore.propTypes = {
+  data: propTypes.arrayOf(
+    propTypes.shape({
+      fill: propTypes.string,
+      number: propTypes.number,
+    })
+  ),
+};
 
 export default DashboardScore;
