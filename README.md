@@ -17,8 +17,8 @@ By default, the data used for this app are mocked. If you want to use the micro 
 - Clone it on your computer
 - The `npm i` or `npm install` will allow you to install the dependecies.
 - If you want to use the API :
-  1. You need to run the server (probably on [http://localhost:3000](http://localhost:3000)).
-  2. You need to go the .env file, and set the `REACT_APP_MOCK` function to `false`.
+  - You need to run the server (probably on [http://localhost:3000](http://localhost:3000)).
+  - You need to go the .env file, and set the `REACT_APP_MOCK` function to `false`.
 - The `npm run start` command will allow you to run the project. If you're port 3000 is already used by the API, you will to go there [http://localhost:3001](http://localhost:3001).
 
 ## Learn More
